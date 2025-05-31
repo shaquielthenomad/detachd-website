@@ -203,7 +203,7 @@ export default function ContactPage() {
             Join leading insurance companies using blockchain technology to eliminate fraud and reduce costs by up to 40%.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/signup" className="bg-detachd-primary hover:bg-detachd-secondary text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
+            <Link href="https://secure.detachd.systems/#/onboarding/role" target="_blank" rel="noopener noreferrer" className="bg-detachd-primary hover:bg-detachd-secondary text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
               <Icon icon="ph:play-duotone" />
               Watch Demo Video
             </Link>

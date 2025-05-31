@@ -169,7 +169,7 @@ const SolutionOverview = () => {
                 </div>
 
                 {/* Action Button */}
-                <Link href="/signup" className='w-full mt-6 bg-detachd-primary hover:bg-detachd-secondary text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2'>
+                <Link href="https://secure.detachd.systems/#/onboarding/role" target="_blank" rel="noopener noreferrer" className='w-full mt-6 bg-detachd-primary hover:bg-detachd-secondary text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2'>
                   <Icon icon="ph:play-duotone" className='text-xl' />
                   Try Interactive Demo
                 </Link>

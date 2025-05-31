@@ -205,7 +205,7 @@ const HowItWorks = () => {
               </div>
 
               <div className='flex flex-col sm:flex-row gap-4'>
-                <Link href="/signup" className='flex-1 bg-detachd-primary hover:bg-detachd-secondary text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2'>
+                <Link href="https://secure.detachd.systems/#/onboarding/role" target="_blank" rel="noopener noreferrer" className='flex-1 bg-detachd-primary hover:bg-detachd-secondary text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2'>
                   <Icon icon="ph:play-duotone" />
                   Watch Demo
                 </Link>

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Icon } from '@iconify/react/dist/iconify.js'
+import Squares from '@/components/Common/Squares'
 
 const DetachdHero = () => {
   const fadeInUp = {
@@ -27,15 +28,26 @@ const DetachdHero = () => {
     <section
       className='relative pt-32 pb-20 overflow-hidden min-h-screen flex items-center'
       id='hero'>
+      {/* Animated Squares Background */}
+      <div className='absolute inset-0 z-0'>
+        <Squares 
+          speed={0.5}
+          squareSize={80}
+          direction='diagonal'
+          borderColor='rgba(255, 255, 255, 0.15)'
+          hoverFillColor='rgba(56, 189, 248, 0.2)'
+        />
+      </div>
+      
       {/* Background Gradient */}
-      <div className='absolute inset-0 bg-gradient-to-br from-detachd-dark via-detachd-slate-800 to-detachd-dark'></div>
-      <div className='absolute inset-0 bg-gradient-to-r from-detachd-primary/10 via-transparent to-detachd-accent/10'></div>
+      <div className='absolute inset-0 bg-gradient-to-br from-detachd-dark/80 via-detachd-slate-800/70 to-detachd-dark/80 z-10'></div>
+      <div className='absolute inset-0 bg-gradient-to-r from-detachd-primary/5 via-transparent to-detachd-accent/5 z-10'></div>
       
       {/* Animated Background Elements */}
-      <div className='absolute w-96 h-96 bg-gradient-to-br from-detachd-primary/20 to-detachd-accent/20 blur-[120px] rounded-full -top-48 -right-48 animate-pulse'></div>
-      <div className='absolute w-64 h-64 bg-gradient-to-br from-detachd-purple/20 to-detachd-success/20 blur-[100px] rounded-full -bottom-32 -left-32 animate-pulse delay-1000'></div>
+      <div className='absolute w-96 h-96 bg-gradient-to-br from-detachd-primary/20 to-detachd-accent/20 blur-[120px] rounded-full -top-48 -right-48 animate-pulse z-10'></div>
+      <div className='absolute w-64 h-64 bg-gradient-to-br from-detachd-purple/20 to-detachd-success/20 blur-[100px] rounded-full -bottom-32 -left-32 animate-pulse delay-1000 z-10'></div>
 
-      <div className='container mx-auto px-4 relative z-10'>
+      <div className='container mx-auto px-4 relative z-20'>
         <div className='grid grid-cols-12 gap-8 items-center'>
           <div className='lg:col-span-6 col-span-12'>
             <motion.div {...fadeInUp}>
@@ -66,7 +78,7 @@ const DetachdHero = () => {
             </motion.p>
 
             <motion.div {...fadeInLeft} className='flex flex-col sm:flex-row gap-4 mb-12'>
-              <Link href="/signup" className='inline-flex items-center justify-center px-8 py-4 bg-detachd-primary hover:bg-detachd-secondary text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>
+              <Link href="https://secure.detachd.systems/#/onboarding/role" target="_blank" rel="noopener noreferrer" className='inline-flex items-center justify-center px-8 py-4 bg-detachd-primary hover:bg-detachd-secondary text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>
                 <Icon icon="ph:envelope-duotone" className='mr-2 text-xl' />
                 Request Demo
               </Link>

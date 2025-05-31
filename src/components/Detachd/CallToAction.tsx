@@ -25,7 +25,7 @@ const CallToAction = () => {
           </p>
 
           <div className='flex flex-col sm:flex-row gap-6 justify-center mb-12'>
-            <Link href="/signup" className='bg-detachd-primary hover:bg-detachd-secondary text-white font-bold py-4 px-10 rounded-lg transition-all duration-300 flex items-center justify-center gap-3 text-lg'>
+            <Link href="https://secure.detachd.systems/#/onboarding/role" target="_blank" rel="noopener noreferrer" className='bg-detachd-primary hover:bg-detachd-secondary text-white font-bold py-4 px-10 rounded-lg transition-all duration-300 flex items-center justify-center gap-3 text-lg'>
               <Icon icon="ph:envelope-duotone" className='text-xl' />
               Request Early Access
             </Link>

@@ -1,7 +1,6 @@
 import React, { FC } from 'react'
 import Link from 'next/link'
-import { headerData } from '../Header/Navigation/menuData'
-import { footerlabels, contactInfo } from '@/app/api/data'
+import { contactInfo } from '@/app/api/data'
 import { Icon } from '@iconify/react'
 
 const Footer: FC = () => {
@@ -36,7 +35,7 @@ const Footer: FC = () => {
         </div>
 
         <div className='grid grid-cols-1 sm:grid-cols-12 lg:gap-20 md:gap-6 sm:gap-12 gap-6 pb-16'>
-          <div className='lg:col-span-4 md:col-span-6 col-span-6'>
+          <div className='lg:col-span-6 md:col-span-6 col-span-12'>
             {/* Detachd Brand without Logo */}
             <div className='mb-6'>
               <h2 className='text-3xl font-bold text-white mb-3'>detachd</h2>
@@ -47,7 +46,7 @@ const Footer: FC = () => {
             </div>
             
             <div className='flex gap-6 items-center mt-8 relative z-1'>
-              <Link href='#' className='group'>
+              <Link href='https://linkedin.com/company/detachd' target='_blank' rel='noopener noreferrer' className='group'>
                 <Icon
                   icon='fa6-brands:linkedin'
                   width='24'
@@ -55,7 +54,7 @@ const Footer: FC = () => {
                   className='text-white group-hover:text-detachd-primary'
                 />
               </Link>
-              <Link href='#' className='group'>
+              <Link href='https://twitter.com/detachd' target='_blank' rel='noopener noreferrer' className='group'>
                 <Icon
                   icon='fa6-brands:x-twitter'
                   width='24'
@@ -63,7 +62,7 @@ const Footer: FC = () => {
                   className='text-white group-hover:text-detachd-primary'
                 />
               </Link>
-              <Link href='#' className='group'>
+              <Link href='https://github.com/detachd' target='_blank' rel='noopener noreferrer' className='group'>
                 <Icon
                   icon='fa6-brands:github'
                   width='24'
@@ -75,40 +74,34 @@ const Footer: FC = () => {
           </div>
           
           <div className='lg:col-span-2 md:col-span-3 col-span-6'>
-            <h4 className='text-white mb-4 font-medium text-24'>Quick Links</h4>
-            <ul>
-              {headerData.map((item, index) => (
-                <li key={index} className='pb-4'>
-                  <Link
-                    href={item.href}
-                    className='text-white hover:text-detachd-primary text-17'>
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          
-          <div className='lg:col-span-2 md:col-span-3 col-span-6'>
             <h4 className='text-white mb-4 font-medium text-24'>Legal</h4>
             <ul>
-              {footerlabels.map((item, index) => (
-                <li key={index} className='pb-4'>
-                  <Link
-                    href={item.href}
-                    className='text-white hover:text-detachd-primary text-17'>
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
+              <li className='pb-4'>
+                <Link
+                  href='/terms'
+                  className='text-white hover:text-detachd-primary text-17'>
+                  Terms
+                </Link>
+              </li>
+              <li className='pb-4'>
+                <Link
+                  href='/privacy'
+                  className='text-white hover:text-detachd-primary text-17'>
+                  Privacy Policy
+                </Link>
+              </li>
+              <li className='pb-4'>
+                <Link
+                  href='/contact'
+                  className='text-white hover:text-detachd-primary text-17'>
+                  Support
+                </Link>
+              </li>
             </ul>
           </div>
           
           <div className='lg:col-span-4 md:col-span-4 col-span-6'>
             <h3 className='text-white text-24 font-medium'>Stay Updated</h3>
-            <p className='text-detachd-text-secondary text-18 mt-5'>
-              Subscribe to get the latest insights on insurance technology and AI innovations.
-            </p>
             <div className='relative lg:w-80%'>
               <input
                 type='email'
