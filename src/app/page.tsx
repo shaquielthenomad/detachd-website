@@ -6,13 +6,14 @@ import KeyFeatures from '@/components/Detachd/KeyFeatures'
 import HowItWorks from '@/components/Detachd/HowItWorks'
 import BenefitsROI from '@/components/Detachd/BenefitsROI'
 import TechnologyStack from '@/components/Detachd/TechnologyStack'
+import FounderStory from '@/components/Detachd/FounderStory'
 import Testimonials from '@/components/Detachd/Testimonials'
 import CallToAction from '@/components/Detachd/CallToAction'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Detachd - Revolutionize Insurance with AI-Powered Automation',
-  description: 'Streamline claims processing, reduce fraud, and enhance customer experience with cutting-edge insurtech solutions from Detachd.',
+  title: 'Detachd - Stop Insurance Fraud in South Africa with AI Image Verification',
+  description: 'Fighting R7-14 billion in annual insurance fraud through AI-powered image verification. Protecting South Africa\'s R600 billion insurance market with instant claim verification.',
 }
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
       <HowItWorks />
       <BenefitsROI />
       <TechnologyStack />
+      <FounderStory />
       <Testimonials />
       <CallToAction />
     </main>

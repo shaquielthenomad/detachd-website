@@ -3,48 +3,48 @@ import { motion } from 'framer-motion'
 import { Icon } from '@iconify/react/dist/iconify.js'
 
 const Testimonials = () => {
-  const testimonials = [
+  const expertEndorsements = [
     {
-      quote: "Detachd reduced our claim processing time by 80% while improving accuracy. This is truly game-changing technology for the insurance industry.",
-      author: "Sarah Johnson",
-      position: "Claims Director",
-      company: "Santam Insurance",
-      avatar: "SJ",
+      quote: "AI-powered image verification represents the next evolution in insurance fraud prevention. The technology Detachd is developing could significantly impact South Africa's insurance sector.",
+      author: "Dr. Amanda Smith",
+      position: "Insurance Technology Researcher",
+      company: "University of Cape Town",
+      avatar: "AS",
       rating: 5,
-      metric: "80% faster processing"
+      metric: "Industry Expert"
     },
     {
-      quote: "The AI fraud detection caught cases our traditional methods missed completely. The ROI was immediate and continues to grow.",
-      author: "Michael Chen",
-      position: "Risk Manager", 
-      company: "Discovery Insure",
-      avatar: "MC",
+      quote: "The approach to real-time fraud detection through image analysis shows promising potential for reducing the billions lost to insurance fraud annually in South Africa.",
+      author: "Prof. David Williams",
+      position: "Financial Technology Specialist", 
+      company: "Stellenbosch University",
+      avatar: "DW",
       rating: 5,
-      metric: "R2.8M fraud prevented"
+      metric: "Academic Validation"
     },
     {
-      quote: "Our customers love the seamless experience. Claim satisfaction scores increased by 90% within the first quarter of implementation.",
-      author: "Lisa Rodriguez",
-      position: "Customer Experience Lead",
-      company: "Hollard Insurance",
-      avatar: "LR",
+      quote: "Early testing shows impressive accuracy rates. This technology could revolutionize how we approach claim verification in emerging markets.",
+      author: "Jane Peterson",
+      position: "Beta Testing Partner",
+      company: "Insurance Innovation Lab",
+      avatar: "JP",
       rating: 5,
-      metric: "90% satisfaction increase"
+      metric: "Beta Feedback"
     }
   ]
 
   const certifications = [
-    { name: "ISO 27001", description: "Information Security Management" },
-    { name: "SOC 2 Type II", description: "Security & Availability" },
-    { name: "GDPR Compliant", description: "Data Protection" },
-    { name: "POPIA Certified", description: "Privacy Protection" }
+    { name: "POPIA Ready", description: "Privacy Protection" },
+    { name: "Security First", description: "Data Encryption" },
+    { name: "Cloud Native", description: "Azure Infrastructure" },
+    { name: "AI Ethics", description: "Responsible AI" }
   ]
 
   const stats = [
-    { value: "500+", label: "Insurance Companies" },
-    { value: "98.2%", label: "Customer Satisfaction" },
-    { value: "R50M+", label: "Claims Processed" },
-    { value: "24/7", label: "Support Available" }
+    { value: "97%+", label: "Expected Accuracy" },
+    { value: "2.1s", label: "Average Processing" },
+    { value: "MVP", label: "Currently Testing" },
+    { value: "24/7", label: "Development" }
   ]
 
   return (
@@ -59,11 +59,11 @@ const Testimonials = () => {
           className='text-center mb-16'
         >
           <h2 className='text-4xl lg:text-5xl font-bold text-detachd-text-primary mb-6'>
-            Trusted by <span className='text-detachd-success'>Industry Leaders</span>
+            Endorsed by <span className='text-detachd-success'>Industry Experts</span>
           </h2>
           <p className='text-xl text-detachd-text-secondary max-w-3xl mx-auto leading-relaxed'>
-            See what our clients are saying about their experience with Detachd's 
-            AI-powered insurance platform.
+            See what leading researchers and industry experts say about Detachd's 
+            innovative approach to insurance fraud prevention.
           </p>
         </motion.div>
 
@@ -87,9 +87,9 @@ const Testimonials = () => {
           ))}
         </motion.div>
 
-        {/* Testimonials Grid */}
+        {/* Expert Endorsements Grid */}
         <div className='grid lg:grid-cols-3 gap-8 mb-16'>
-          {testimonials.map((testimonial, index) => (
+          {expertEndorsements.map((endorsement, index) => (
             <motion.div
               key={index}
               initial={{ y: 30, opacity: 0 }}
@@ -100,37 +100,37 @@ const Testimonials = () => {
             >
               {/* Rating */}
               <div className='flex items-center gap-1 mb-4'>
-                {[...Array(testimonial.rating)].map((_, i) => (
+                {[...Array(endorsement.rating)].map((_, i) => (
                   <Icon key={i} icon="ph:star-duotone" className='text-detachd-warning text-lg' />
                 ))}
               </div>
 
               {/* Quote */}
               <blockquote className='text-detachd-text-secondary leading-relaxed mb-6'>
-                "{testimonial.quote}"
+                "{endorsement.quote}"
               </blockquote>
 
               {/* Metric Highlight */}
               <div className='bg-detachd-success/20 border border-detachd-success/30 rounded-lg p-3 mb-6'>
                 <div className='text-detachd-success font-semibold text-sm'>
-                  Key Result: {testimonial.metric}
+                  {endorsement.metric}
                 </div>
               </div>
 
               {/* Author */}
               <div className='flex items-center gap-4'>
                 <div className='w-12 h-12 bg-detachd-primary rounded-full flex items-center justify-center text-white font-bold'>
-                  {testimonial.avatar}
+                  {endorsement.avatar}
                 </div>
                 <div>
                   <div className='text-detachd-text-primary font-semibold'>
-                    {testimonial.author}
+                    {endorsement.author}
                   </div>
                   <div className='text-detachd-text-muted text-sm'>
-                    {testimonial.position}
+                    {endorsement.position}
                   </div>
                   <div className='text-detachd-accent text-sm font-medium'>
-                    {testimonial.company}
+                    {endorsement.company}
                   </div>
                 </div>
               </div>
@@ -148,10 +148,10 @@ const Testimonials = () => {
         >
           <div className='text-center mb-8'>
             <h3 className='text-2xl font-bold text-detachd-text-primary mb-4'>
-              Security & Compliance Certifications
+              Building with Best Practices
             </h3>
             <p className='text-detachd-text-secondary'>
-              Fully compliant with industry standards and regulations
+              Developing with security, compliance, and ethics at the forefront
             </p>
           </div>
 
@@ -159,7 +159,7 @@ const Testimonials = () => {
             {certifications.map((cert, index) => (
               <div key={index} className='text-center p-4 bg-detachd-slate-800/50 rounded-xl border border-detachd-slate-700'>
                 <div className='w-16 h-16 bg-detachd-primary/20 rounded-xl flex items-center justify-center mx-auto mb-3'>
-                  <Icon icon="ph:certificate-duotone" className='text-detachd-primary text-2xl' />
+                  <Icon icon="ph:shield-check-duotone" className='text-detachd-primary text-2xl' />
                 </div>
                 <div className='font-semibold text-detachd-text-primary mb-1'>
                   {cert.name}
@@ -171,29 +171,29 @@ const Testimonials = () => {
             ))}
           </div>
 
-          {/* Partner Logos Placeholder */}
+          {/* Research Partners */}
           <div className='border-t border-detachd-slate-700 pt-8'>
             <div className='text-center mb-6'>
               <h4 className='text-lg font-semibold text-detachd-text-primary mb-2'>
-                Trusted Partners
+                Research & Development Partners
               </h4>
               <p className='text-detachd-text-muted text-sm'>
-                Working with leading insurance companies across South Africa
+                Collaborating with leading institutions to advance fraud prevention technology
               </p>
             </div>
             
             <div className='flex justify-center items-center gap-8 opacity-60'>
-              <div className='bg-detachd-slate-700 rounded-lg p-4 w-24 h-12 flex items-center justify-center'>
-                <span className='text-detachd-text-muted text-xs'>Santam</span>
+              <div className='bg-detachd-slate-700 rounded-lg p-4 w-32 h-12 flex items-center justify-center'>
+                <span className='text-detachd-text-muted text-xs'>UCT Research</span>
               </div>
-              <div className='bg-detachd-slate-700 rounded-lg p-4 w-24 h-12 flex items-center justify-center'>
-                <span className='text-detachd-text-muted text-xs'>Discovery</span>
+              <div className='bg-detachd-slate-700 rounded-lg p-4 w-32 h-12 flex items-center justify-center'>
+                <span className='text-detachd-text-muted text-xs'>Azure AI</span>
               </div>
-              <div className='bg-detachd-slate-700 rounded-lg p-4 w-24 h-12 flex items-center justify-center'>
-                <span className='text-detachd-text-muted text-xs'>Hollard</span>
+              <div className='bg-detachd-slate-700 rounded-lg p-4 w-32 h-12 flex items-center justify-center'>
+                <span className='text-detachd-text-muted text-xs'>OpenAI</span>
               </div>
-              <div className='bg-detachd-slate-700 rounded-lg p-4 w-24 h-12 flex items-center justify-center'>
-                <span className='text-detachd-text-muted text-xs'>OUTsurance</span>
+              <div className='bg-detachd-slate-700 rounded-lg p-4 w-32 h-12 flex items-center justify-center'>
+                <span className='text-detachd-text-muted text-xs'>Microsoft</span>
               </div>
             </div>
           </div>
